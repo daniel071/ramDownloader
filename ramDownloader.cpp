@@ -1,10 +1,24 @@
-// include progress bar for downloading ram
+// includes progress bar for downloading ram
 // rick roll user
+
 #include <stdio.h>
 #include <unistd.h>
 #include <iostream>
 #include <string>
 using namespace std;
+
+int operating_system()
+{
+    #ifdef _WIN32
+    	return 1;
+    #elif _WIN64
+    	return 1;
+    #elif __APPLE__ || __MACH__
+    	return 2;
+    #else
+    	return 3;
+    #endif
+}
 
 int main() {
 	cout << "What method would you like to use to download RAM?";
@@ -13,7 +27,7 @@ int main() {
 	string selection;
 	cin >> selection;
 
-	cout << "\nHow much RAM would you like to download? (In GB) ";	
+	cout << "\nHow much RAM would you like to download? (In GB) ";
 	cin >> selection;
 
 	cout << "\nPlease wait while this program downloads more RAM...";
@@ -45,6 +59,19 @@ int main() {
   cout << endl;
 
 	cout << "\nDownloading more RAM was successful!";
+
+	int operatingSystem = operating_system();
+
+	if (operatingSystem == 1) {
+		// If on Windows
+		system("start https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+	} else if (operatingSystem == 2) {
+		// If on macOS
+		system("open https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+	} else {
+		// If on Linux
+		system("xdg-open https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+	}
 
 	cout << "\nPress enter to exit...";
 	cin.get();
