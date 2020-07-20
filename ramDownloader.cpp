@@ -7,23 +7,32 @@
 using namespace std;
 
 int main() {
-	std::cout << "Please wait while this program downloads more RAM...";
-	std::cout << "\n\n";
+	cout << "What method would you like to use to download RAM?";
+	cout << "\nA) CloudRAM 2.0";
+	cout << "\nB) CloudRAM 1.1\n";
+	string selection;
+	cin >> selection;
+
+	cout << "\nHow much RAM would you like to download? (In GB) ";	
+	cin >> selection;
+
+	cout << "\nPlease wait while this program downloads more RAM...";
+	cout << "\n";
 	usleep(1000000);
 
   float progress = 0.0;
   while (progress < 1.00001) {
       int barWidth = 70;
 
-      std::cout << "[";
+      cout << "[";
       int pos = barWidth * progress;
       for (int i = 0; i < barWidth; ++i) {
-          if (i < pos) std::cout << "=";
-          else if (i == pos) std::cout << ">";
-          else std::cout << " ";
+          if (i < pos) cout << "=";
+          else if (i == pos) cout << ">";
+          else cout << " ";
       }
-      std::cout << "] " << int(progress * 100.0) << " %\r";
-      std::cout.flush();
+      cout << "] " << int(progress * 100.0) << " %\r";
+      cout.flush();
 
 			if (progress > 0.91 && progress != 1) {
 				progress = 1;
@@ -33,7 +42,7 @@ int main() {
 
 			usleep(rand() % (20000 - 600000 + 1) + 20000);
   }
-  cout << std::endl;
+  cout << endl;
 
 	cout << "\nDownloading more RAM was successful!";
 
