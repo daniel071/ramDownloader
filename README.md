@@ -16,4 +16,4 @@ Download the binary for your operating system [**here**](https://github.com/dani
 
 - On Linux, give it permission to run with `chmod +x ./freeRAM.out` then run it with `./freeRAM.out`
 
-You can also compile the source code with `g++` or `clang++`
+You can also compile the source code with `g++ ./ramDownloader.cpp` or `clang++ ./ramDownloader.cpp`
