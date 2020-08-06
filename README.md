@@ -1,4 +1,7 @@
 # Ram Downloader
+
+<sub>Ram Downloader is a joke program. It doesn't actually download any RAM, I made this for fun and experience</sub>
+
 RamDownloader is a simple to use RAM downloading program. It uses the latest
 [CloudRAM v2.0](https://www.youtube.com/watch?v=dQw4w9WgXcQ) protocol and can download up to 64GB of RAM.
 
