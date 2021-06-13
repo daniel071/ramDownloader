@@ -62,16 +62,20 @@ int main() {
 
 	int operatingSystem = operating_system();
 
-	if (operatingSystem == 1) {
-		// If on Windows
-		system("start https://www.youtube.com/watch?v=dQw4w9WgXcQ");
-	} else if (operatingSystem == 2) {
-		// If on macOS
-		system("open https://www.youtube.com/watch?v=dQw4w9WgXcQ");
-	} else {
-		// If on Linux
-		system("xdg-open https://www.youtube.com/watch?v=dQw4w9WgXcQ");
-	}
+  switch(operatingSystem) {
+    case 1:
+      // If on Windows
+      system("start https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+      break;
+    case 2:
+      // If on macOS
+      system("open https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+      break;
+    case 3:
+      // If on Linux
+      system("xdg-open https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+      break;
+  }
 
 	cout << "\nPress enter to exit...";
 	cin.get();
